@@ -1,19 +1,17 @@
 import numpy as np
 
-M_jan = np.array([[50, 40],
-                  [30, 20]])
+A = np.array([[50, 40],
+              [30, 20]])
+B = np.array([[60, 35],
+             [25, 30]])
+C = np.array([[2, 3],
+              [2, 3]])
 
-M_fev = np.array([[60, 35],
-                  [25, 30]])
+soma_total = A + B
 
-total_producao = M_jan + M_fev
-print("Produção total do bimestre:")
-print(total_producao)
+produtoA = A * C
+produtoB = B * C
 
-
-matriz_pesos = np.zeros((2, 2))
-matriz_pesos[:, 0] = total_producao[:, 0] * 2 
-matriz_pesos[:, 1] = total_producao[:, 1] * 3  
-
-print("\nMatriz de pesos (kg de matéria-prima):")
-print(matriz_pesos)
+print(f"O valor da soma total é: {soma_total}")
+print(f"O peso fo produto A é: {produtoA}")
+print(f"O peso do produto B é : {produtoB}")
